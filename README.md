@@ -18,22 +18,6 @@ MVP: Iterating on the prototype so that it takes a portfolio of cryptos and advi
 ## Future Product: 
 GUI driven selection of portfolio and initial investment, desired growth % input, ML led analysis
 
-# API and Librearies 
-## Load libraries and dependencies
-import os
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import hvplot.pandas
-## import alpaca_trade_api as tradeapi --> might not be needed
-from MCForecastTools import MCSimulation
-%matplotlib inline
-## This is a new library not used previously in the class
-import yfinance as yf
-from datetime import datetime, timedelta
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score
-
 **Team thinking of a three part approach to the project that we can address based on time availability:**
 1. Single crypto portfolio Analyser (Prototype)
 2. Multi cryp**to portfolio analyser Analyser (MVP)
@@ -47,7 +31,6 @@ from sklearn.metrics import precision_score
 - Coinbase to get Ticker Data
 - Could look at machine learning
 - Python Panels Library
-~~WIP
 
 # Visual Plots of the analysis 
 
@@ -70,8 +53,20 @@ from sklearn.metrics import precision_score
 https://docs.google.com/presentation/d/1pL1iyRhPE8dyZXM-JqKMqu_CZkGzA_qKc68_VcMg8xc/edit#slide=id.p
 
 # Datasets to be used
-- Coinbase to get Ticker Data
-~~WIP
+## Load libraries and dependencies
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import hvplot.pandas
+## import alpaca_trade_api as tradeapi --> might not be needed
+from MCForecastTools import MCSimulation
+%matplotlib inline
+## This is a new library not used previously in the class
+import yfinance as yf
+from datetime import datetime, timedelta
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import precision_score
 
 # Rough breakdown of tasks
 
@@ -103,10 +98,6 @@ Shayan to add visualisation placeholder
 Ferdows to update the README.md file after reviewing the branch creation
 
 
-### Resources
-- https://mljar.com/blog/dashboard-python-jupyter-notebook/
-- https://stackoverflow.com/questions/28268818/how-to-find-the-date-n-days-ago-in-python
-
 # Questions to Answer
 What is the historical price of the crypto currency pairs?
 What is the projected price tomorrow?
@@ -115,3 +106,6 @@ What position should we hold (buy/sell)?
 What is the expected return?
 What is the accuracy of the model?
 
+### Resources
+- https://mljar.com/blog/dashboard-python-jupyter-notebook/
+- https://stackoverflow.com/questions/28268818/how-to-find-the-date-n-days-ago-in-python
