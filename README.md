@@ -20,17 +20,41 @@ GUI driven selection of portfolio and initial investment, desired growth % input
 
 **Team thinking of a three part approach to the project that we can address based on time availability:**
 1. Single crypto portfolio Analyser (Prototype)
-2. Multi cryp**to portfolio analyser Analyser (MVP)
+2. Multi crypto portfolio analyser Analyser (MVP)
 3. World wide Multi crypto portfolio Analyser visualiser vs stock indices (nice to have)
 
 **Take an MVP approach to solution**
 
 - Think about notifications (SMS)
 
-## Tools: 
-- Coinbase to get Ticker Data
-- Could look at machine learning
-- Python Panels Library
+# Installation Guide and Libraries:
+## FOllwoing modules needs to be installed prior to running the code: 
+pip install yfinance
+pip install yahoofinance
+pip install clicksend-client
+pip install phonenumbers
+## Load libraries and dependencies
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import hvplot.pandas
+## import alpaca_trade_api as tradeapi --> might not be needed
+from MCForecastTools import MCSimulation
+%matplotlib inline
+## This is a new library not used previously in the class
+import yfinance as yf
+from datetime import datetime, timedelta
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import precision_score
+from __future__ import print_function
+import clicksend_client
+from clicksend_client import SmsMessage
+from clicksend_client.rest import ApiException
+from dotenv import load_dotenv
+import phonenumbers
+from phonenumbers import carrier
+from phonenumbers.phonenumberutil import number_type
 
 # Visual Plots of the analysis 
 
@@ -52,21 +76,6 @@ GUI driven selection of portfolio and initial investment, desired growth % input
 
 https://docs.google.com/presentation/d/1pL1iyRhPE8dyZXM-JqKMqu_CZkGzA_qKc68_VcMg8xc/edit#slide=id.p
 
-# Datasets to be used
-## Load libraries and dependencies
-import os
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import hvplot.pandas
-## import alpaca_trade_api as tradeapi --> might not be needed
-from MCForecastTools import MCSimulation
-%matplotlib inline
-## This is a new library not used previously in the class
-import yfinance as yf
-from datetime import datetime, timedelta
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score
 
 # Rough breakdown of tasks
 
