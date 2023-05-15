@@ -39,7 +39,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import hvplot.pandas
-## import alpaca_trade_api as tradeapi --> might not be needed
+import alpaca_trade_api as tradeapi --> might not be needed
 from MCForecastTools import MCSimulation
 %matplotlib inline
 ## This is a new library not used previously in the class
