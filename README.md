@@ -8,7 +8,7 @@
 3. **Ferdows** 
 4. **Shayan**
 
-# Project description/outline
+# Project description:
 Takes the users desired mix of cryptos (BTC, ETH, LTC) and perform a Machine Learning and Monte Carlo simulation on the historical portfolio to assess possible future returns
 # Stepwise development:
 ## Ideation: Research possibilities
