@@ -15,7 +15,23 @@ MVP: Iterating on the prototype so that it takes a portfolio of cryptos and advi
 ## Future Product: 
 GUI driven selection of portfolio and initial investment, desired growth % input, ML led analysis
 
-Team thinking of a three part approach to the project that we can address based on time availability:
+# API and Librearies 
+## Load libraries and dependencies
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import hvplot.pandas
+## import alpaca_trade_api as tradeapi --> might not be needed
+from MCForecastTools import MCSimulation
+%matplotlib inline
+## This is a new library not used previously in the class
+import yfinance as yf
+from datetime import datetime, timedelta
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import precision_score
+
+# Team thinking of a three part approach to the project that we can address based on time availability:
 1. Single crypto portfolio Analyser (Prototype)
 2. Multi crypto portfolio analyser Analyser (MVP)
 3. World wide Multi crypto portfolio Analyser visualiser vs stock indices (nice to have)
@@ -29,6 +45,13 @@ Team thinking of a three part approach to the project that we can address based 
 - Could look at machine learning
 - Python Panels Library
 ~~WIP
+
+# Visual Plots of the analysis 
+
+| ![Image 1](images/image1.png)  | [Image 2](images/image2.png) |
+| ![Image 3](images/image3.png)  | [Image 4](images/image4.png) |
+| ![Image 5](images/image5.png)  | [Image 6](images/image6.png) |
+| ![Image 7](images/image7.png)  | [Image 8](images/image8.png) |
 
 # Research questions to answer
 1. What datasets/APIs to use?
@@ -51,7 +74,10 @@ Team thinking of a three part approach to the project that we can address based 
 - Presentation Manager: Shayan
 
 ## Day 1
-
+Leaning towards crypto portfolio analyser, that will take desired growth aspirations and return and optimal mix of crypto portfolios and trade time windows.
+Initial steps:
+- Have an initial tool that tells us how to maximise returns first: what crypto currency mix, what trade time window, etc.
+- Create a follow up prototype that takes desired growth % and returns optimal mix/trade window.
 - Roshan to do research on the APIs
 - Ferdows to do research on optimising crypto portfolio returns online
 - Ferdows to learn how to create a branch in the GitHub repo and maintain the README.md file
@@ -82,8 +108,3 @@ What position should we hold (buy/sell)?
 What is the expected return?
 What is the accuracy of the model?
 
-# day 1 discussion : 
-Leaning towards crypto portfolio analyser, that will take desired growth aspirations and return and optimal mix of crypto portfolios and trade time windows.
-Initial steps:
-- Have an initial tool that tells us how to maximise returns first: what crypto currency mix, what trade time window, etc.
-- Create a follow up prototype that takes desired growth % and returns optimal mix/trade window.
