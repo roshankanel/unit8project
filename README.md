@@ -13,8 +13,8 @@ Takes the users desired mix of cryptos (BTC, ETH, LTC) and perform a Machine Lea
 # Stepwise development:
 ## 1. Ideation: Research possibilities
 ## 2. Prototype:
-An initial tool that advises the user of the possible returns for a single Crypto Currency Pair (BTC-USD)
-MVP: Iterating on the prototype so that it takes a portfolio of cryptos and advises of possible returns with a SMS message
+An initial tool that advises the user of the possible returns for a single Crypto Currency Pair (BTC-USD)<br>
+MVP: Iterating on the prototype so that it takes a portfolio of cryptos and advises of possible returns with a SMS message<br>
 ## 3.Future Product: 
 GUI driven selection of portfolio and initial investment, desired growth % input, ML led analysis
 
@@ -34,42 +34,45 @@ GUI driven selection of portfolio and initial investment, desired growth % input
 3. pip install clicksend-client
 4. pip install phonenumbers
 ## Load libraries and dependencies
-import os
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import hvplot.pandas
-import alpaca_trade_api as tradeapi --> might not be needed
-from MCForecastTools import MCSimulation
-%matplotlib inline
+import os<br>
+import numpy as np<br>
+import pandas as pd<br>
+import matplotlib.pyplot as plt<br>
+import hvplot.pandas<br>
+from MCForecastTools import MCSimulation<br>
+%matplotlib inline<br>
 ## This is a new library not used previously in the class
-import yfinance as yf
-from datetime import datetime, timedelta
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score
-from __future__ import print_function
-import clicksend_client
-from clicksend_client import SmsMessage
-from clicksend_client.rest import ApiException
-from dotenv import load_dotenv
-import phonenumbers
-from phonenumbers import carrier
-from phonenumbers.phonenumberutil import number_type
+import yfinance as yf<br>
+from datetime import datetime, timedelta<br>
+from sklearn.ensemble import RandomForestClassifier<br>
+from sklearn.metrics import precision_score<br>
+from __future__ import print_function<br>
+import clicksend_client<br>
+from clicksend_client import SmsMessage<br>
+from clicksend_client.rest import ApiException<br>
+from dotenv import load_dotenv<br>
+import phonenumbers<br>
+from phonenumbers import carrier<br>
+from phonenumbers.phonenumberutil import number_type<br>
 
 # Visual Plots of the analysis 
 
-||![Image 2](images/image2.png)|![Image 7](images/image7.png)|
-|![Image 3](images/image3.png)|![Image 4](images/image4.png)|
-|![Image 5](images/image5.png)|![Image 6](images/image6.png)|
-|![Image 1](images/image1.png)|![Image 8](images/image8.png)|
+![Image 7](images/image7.png)<br>
+![Image 4](images/image4.png)<br>
+![Image 5](images/image5.png)<br>
+![Image 6](images/image6.png)<br>
+![Image 2](images/image2.png)<br>
+![Image 3](images/image3.png)<br>
+![Image 1](images/image1.png)<br>
+![Image 8](images/image8.png)<br>
 
 # Research questions to consider
-1. What datasets/APIs to use? \n*See above*
-2. Which crypto currency to begin the analysis with?\n*Started work with BTC due to range of data available*
-3. How many crypto to include in a multi crypto portfolio?\n*Started with considering 5, but it was not adding value to the work so the number was reduced to 3 to enhance time management of project*
-4. What is the optimal way to conduct simulations?\n*Monte Carlo sim is backwards looking and dependent on historical data and whilst useful is not a full proof tool, we explored the Random Forest Clacifier as an alternative but the ML algorithim did not work as desired due to the series nature of the data*
-5. Research what has been done online? (consult online tools)\n*See resources section below*
-6. Which APIs or Python Libraries can we use to do visualisations, create GUIs, etc?\n*See above*
+1. What datasets/APIs to use? <br>*See above*<br>
+2. Which crypto currency to begin the analysis with?<br>*Started work with BTC due to range of data available*<br>
+3. How many crypto to include in a multi crypto portfolio?<br>*Started with considering 5, but it was not adding value to the work so the number was reduced to 3 to enhance time management of project*<br>
+4. What is the optimal way to conduct simulations?<br>*Monte Carlo sim is backwards looking and dependent on historical data and whilst useful is not a full proof tool, we explored the Random Forest Clacifier as an alternative but the ML algorithim did not work as desired due to the series nature of the data*<br>
+5. Research what has been done online? (consult online tools)<br>*See resources section below*<br>
+6. Which APIs or Python Libraries can we use to do visualisations, create GUIs, etc?<br>*See above*<br>
 
 
 # presentation Slides : 
@@ -101,20 +104,20 @@ Initial steps:
 - Alex to pull sample code from previous lessons into jupyter lab notebook
 
 ### Day 2
-Alex to complete random forest classifier code
-Roshan Investigate notifications API
-Shayan to review code
-Shayan to add visualisation placeholder
-Ferdows to update the README.md file after reviewing the branch creation
+Alex to complete random forest classifier code<br>
+Roshan Investigate notifications API<br>
+Shayan to review code<br>
+Shayan to add visualisation placeholder<br>
+Ferdows to update the README.md file after reviewing the branch creation<br>
 
 
 # Questions to Answer with the MVP
-What is the historical price of the crypto currency pairs? *See code*
-What is the projected price tomorrow? *Consider for the future*
-What is the associated risk? *See code*
-What position should we hold (buy/sell)? *Consider for future*
-What is the expected return? *See code*
-What is the accuracy of the model? *See code*
+What is the historical price of the crypto currency pairs? *See code*<br>
+What is the projected price tomorrow? *Consider for the future*<br>
+What is the associated risk? *See code*<br>
+What position should we hold (buy/sell)? *Consider for future*<br>
+What is the expected return? *See code*<br>
+What is the accuracy of the model? *See code*<br>
 
 ### Resources
 - https://mljar.com/blog/dashboard-python-jupyter-notebook/
