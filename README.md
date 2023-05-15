@@ -11,11 +11,11 @@
 # Project description:
 Takes the users desired mix of cryptos (BTC, ETH, LTC) and perform a Machine Learning and Monte Carlo simulation on the historical portfolio to assess possible future returns
 # Stepwise development:
-## Ideation: Research possibilities
-## Prototype:
+## 1. Ideation: Research possibilities
+## 2. Prototype:
 An initial tool that advises the user of the possible returns for a single Crypto Currency Pair (BTC-USD)
 MVP: Iterating on the prototype so that it takes a portfolio of cryptos and advises of possible returns with a SMS message
-## Future Product: 
+## 3.Future Product: 
 GUI driven selection of portfolio and initial investment, desired growth % input, ML led analysis
 
 **Team thinking of a three part approach to the project that we can address based on time availability:**
@@ -25,14 +25,14 @@ GUI driven selection of portfolio and initial investment, desired growth % input
 
 **Take an MVP approach to solution**
 
-- Think about notifications (SMS)
+- Enhance with notifications for the user (e.g. SMS)
 
 # Installation Guide and Libraries:
-## FOllwoing modules needs to be installed prior to running the code: 
-pip install yfinance
-pip install yahoofinance
-pip install clicksend-client
-pip install phonenumbers
+## Follwoing modules need to be installed prior to running the code: 
+1. pip install yfinance
+2. pip install yahoofinance
+3. pip install clicksend-client
+4. pip install phonenumbers
 ## Load libraries and dependencies
 import os
 import numpy as np
@@ -58,23 +58,23 @@ from phonenumbers.phonenumberutil import number_type
 
 # Visual Plots of the analysis 
 
-|![Image 1](images/image1.png)|![Image 2](images/image2.png)|
+||![Image 2](images/image2.png)|![Image 7](images/image7.png)|
 |![Image 3](images/image3.png)|![Image 4](images/image4.png)|
 |![Image 5](images/image5.png)|![Image 6](images/image6.png)|
-|![Image 7](images/image7.png)|![Image 8](images/image8.png)|
+|![Image 1](images/image1.png)|![Image 8](images/image8.png)|
 
-# Research questions to answer
-1. What datasets/APIs to use?
-2. Which crypto currency to begin the analysis with?
-3. How many crypto to include in a multi crypto portfolio?
-4. What is the optimal way to conduct simulations?
-5. Research what has been done online? (consult online tools)
-6. Which APIs or Python Libraries can we use to do visualisations, create GUIs, etc?
+# Research questions to consider
+1. What datasets/APIs to use? \n*See above*
+2. Which crypto currency to begin the analysis with?\n*Started work with BTC due to range of data available*
+3. How many crypto to include in a multi crypto portfolio?\n*Started with considering 5, but it was not adding value to the work so the number was reduced to 3 to enhance time management of project*
+4. What is the optimal way to conduct simulations?\n*Monte Carlo sim is backwards looking and dependent on historical data and whilst useful is not a full proof tool, we explored the Random Forest Clacifier as an alternative but the ML algorithim did not work as desired due to the series nature of the data*
+5. Research what has been done online? (consult online tools)\n*See resources section below*
+6. Which APIs or Python Libraries can we use to do visualisations, create GUIs, etc?\n*See above*
 
 
 # presentation Slides : 
 
-https://docs.google.com/presentation/d/1pL1iyRhPE8dyZXM-JqKMqu_CZkGzA_qKc68_VcMg8xc/edit#slide=id.p
+https://docs.google.com/presentation/d/1pL1iyRhPE8dyZXM-JqKMqu_CZkGzA_qKc68_VcMg8xc/edit?usp=sharing
 
 
 # Rough breakdown of tasks
@@ -83,6 +83,7 @@ https://docs.google.com/presentation/d/1pL1iyRhPE8dyZXM-JqKMqu_CZkGzA_qKc68_VcMg
 - Google Drive Manager: Ferdows
 - GitHub README.md Manager: Ferdows
 - Presentation Manager: Shayan
+- RFC Research: Alex
 
 ### Day 1
 Leaning towards crypto portfolio analyser, that will take desired growth aspirations and return and optimal mix of crypto portfolios and trade time windows.
@@ -107,14 +108,18 @@ Shayan to add visualisation placeholder
 Ferdows to update the README.md file after reviewing the branch creation
 
 
-# Questions to Answer
-What is the historical price of the crypto currency pairs?
-What is the projected price tomorrow?
-What is the associated risk?
-What position should we hold (buy/sell)?
-What is the expected return?
-What is the accuracy of the model?
+# Questions to Answer with the MVP
+What is the historical price of the crypto currency pairs? *See code*
+What is the projected price tomorrow? *Consider for the future*
+What is the associated risk? *See code*
+What position should we hold (buy/sell)? *Consider for future*
+What is the expected return? *See code*
+What is the accuracy of the model? *See code*
 
 ### Resources
 - https://mljar.com/blog/dashboard-python-jupyter-notebook/
 - https://stackoverflow.com/questions/28268818/how-to-find-the-date-n-days-ago-in-python
+- https://www.section.io/engineering-education/stock-price-prediction-using-python/
+- https://medium.com/tiendeo-tech/setup-jupyter-notebook-workspace-with-tensorflow-keras-on-windows-e0b4102ed826
+- https://data-flair.training/blogs/stock-price-prediction-machine-learning-project-in-python/
+- https://dashboard.clicksend.com/home
